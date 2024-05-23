@@ -60,14 +60,14 @@ class IdleGame{
 		this.ball.update(this.leftPaddle, this.rightPaddle);
 	}
 	draw(context){
-		context.fillStyle = "rgba(0, 0, 0, 0.5)"; // Adjust the alpha value (0.3) for the desired level of transparency
+		context.fillStyle = "black"; // Adjust the alpha value (0.3) for the desired level of transparency
 		context.fillRect(0,0, this.width, this.height);
 		
 		context.fillStyle = "white"
 		for (let y = 8; y < this.height; y += 24) {
 			context.fillRect(this.width / 2 - 1, y, 2, 8); // by this order: (center of the screen, I = position(y), 2 = width, 12.5 = height)
 		}
-		context.fillStyle = "rgba(50, 190, 255, 1)";
+		// context.fillStyle = "white";
 
 
 		this.ball.draw(context);
